@@ -1,37 +1,45 @@
-# Week 4 Example 1: Multi-File Structure + Rock Paper Scissors
-
-## What This Example Demonstrates
-
-> **Note for students:** This section is included in example files only to help you study. Do not include it in your Side Quest submissions.
-
-This example introduces multi-file structure by splitting a Rock Paper Scissors game across three JavaScript files, each with a clear responsibility.
-
-- **Multi-file structure** — `sketch.js` handles the p5.js entry point, `game.js` holds all game logic, and `scenes.js` holds all drawing functions; separating concerns makes each file shorter and easier to read
-- **Shared global scope** — all `.js` files loaded in `index.html` share the same global scope, so variables and functions defined in one file are available in the others
-- **Load order** — files must be loaded in `index.html` in the right order; `game.js` and `scenes.js` are loaded before `sketch.js` because `sketch.js` uses functions from both
-- **Constants for strings** — `ROCK`, `PAPER`, and `SCISSORS` are defined as constants rather than typing the strings directly; this prevents typos from causing silent bugs
-- **`null` as a default** — `playerChoice` starts as `null` so `sketch.js` can check whether a round is in progress using `if (playerChoice !== null)`
-- **`random(array)`** — picks a random element from an array; used here to select the NPC's move each round
-- **`rectMode(CENTER)`** — changes how `rect()` is positioned so that `x` and `y` refer to the centre rather than the top-left corner; useful for buttons that need to be centred on a point
-- **Hover detection** — `isMouseOver()` checks whether the mouse is inside a button's bounds; passed as `isHovered` to `drawButton()` to change the button colour on hover
-- **`mousePressed()`** — fires once per click; used here to check which button was clicked and call the appropriate game logic function
+# Week 4 Example 1: Getting Over It Story
 
 ## Setup and Interaction Instructions
 
-To run the sketch locally, open `index.html` in Google Chrome using Live Server.
+🛠️ Setup Instructions
+To run this multi-file game locally without hitting browser security blocks or layout clipping, follow these steps:
 
-Click **Rock**, **Paper**, or **Scissors** to play a round against the NPC blob. Click **Play Again** to reset.
+Flatten the Directory: Ensure all 15 .html files, 15 .js files, scenes.js, and game.js are sitting directly in the main root folder of your project. Do not place them inside subfolders.
 
-**Opening the Chrome Console**
+Open in VS Code: Launch VS Code and open your project folder (File > Open Folder...).
 
-- **Windows:** Press `F12` or `Ctrl + Shift + J`, then click the **Console** tab
-- **Mac:** Press `Cmd + Option + J`
+Launch Live Server:
 
-The console will show any errors in your sketch.
+If you haven't already, install the Live Server extension in VS Code.
+
+Right-click on your entry file—index.html—and select Open with Live Server.
+
+Maximize the Browser Window: Make sure your web browser window is maximized/full screen. Because the game is vertically centered, a tiny window will slice off the canvas and hide your choice buttons.
+
+🕹️ Interaction Instructions
+Once the game is running in your browser, here is how a player interacts with the world:
+
+The Canvas Window: The entire narrative takes place within a centered, 800x450 canvas window styled to resemble the punishing, atmospheric sunset mountains of Getting Over It.
+
+Reading the Narrative: Each screen presents a short story text at the top detailing your current altitude, obstacles (like branches, chimneys, or lanterns), and immediate dangers.
+
+Hovering for Feedback: Move your mouse cursor over the two action choices at the bottom of the screen. The buttons are programmed with interactive hover logic: they will shift from dark rusted iron to a lighter steel tone with an orange border to show they are clickable.
+
+Making a Move: Left-click a button to make your choice. The game uses instant, smooth client-side routing to load the next branch of the story without any jarring loading screens.
+
+Navigating Endings:
+
+If you find a path to the summit, you will hit a Victory Ending Screen celebrating your success.
+
+If you make a mistake, you will hit one of the Failure Ending Screens. These will display a punishing, randomized philosophical quote from Bennett Foddy to match the frustration of the original game.
+
+Restarting: Every final ending screen contains a single button ("Start Over" or "Play Again"). Clicking this button wipes the slate clean and seamlessly throws you right back to index.html inside your cast-iron cauldron at the base of the mountain.
+
 
 ## Assets
 
-No external assets used. All visuals are generated with p5.js.
+No external assets used.
 
 ## References
 
