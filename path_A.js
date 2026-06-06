@@ -1,4 +1,3 @@
-javascript
 // ============================================================
 // path_A.js: Level 2 - You hooked the branch
 // ============================================================
@@ -33,10 +32,10 @@ function draw() {
 
 function mousePressed() {
   if (isMouseOver(250, BTN_Y, BTN_W, BTN_H)) {
-    makeChoice("path_A1.html"); // Jumps to Level 3!
+    makeChoice("path_A1.html");
   }
   
   if (isMouseOver(550, BTN_Y, BTN_W, BTN_H)) {
-    makeChoice("path_A2.html"); // Jumps to Level 3!
+    makeChoice("path_A2.html");
   }
 }
