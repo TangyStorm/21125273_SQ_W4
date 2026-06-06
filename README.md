@@ -2,7 +2,7 @@
 
 ## Setup and Interaction Instructions
 
-🛠️ Setup Instructions
+Setup Instructions
 To run this multi-file game locally without hitting browser security blocks or layout clipping, follow these steps:
 
 Flatten the Directory: Ensure all 15 .html files, 15 .js files, scenes.js, and game.js are sitting directly in the main root folder of your project. Do not place them inside subfolders.
@@ -17,7 +17,7 @@ Right-click on your entry file—index.html—and select Open with Live Server.
 
 Maximize the Browser Window: Make sure your web browser window is maximized/full screen. Because the game is vertically centered, a tiny window will slice off the canvas and hide your choice buttons.
 
-🕹️ Interaction Instructions
+Interaction Instructions
 Once the game is running in your browser, here is how a player interacts with the world:
 
 The Canvas Window: The entire narrative takes place within a centered, 800x450 canvas window styled to resemble the punishing, atmospheric sunset mountains of Getting Over It.
